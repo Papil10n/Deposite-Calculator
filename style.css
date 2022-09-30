@@ -128,7 +128,7 @@ input::placeholder {
 @media (max-width: 699px) {
   .spanm {
     position: relative;
-    top: -19px;
+    top: -21px;
     left: -35px;
   }
 }
@@ -146,9 +146,10 @@ input::placeholder {
 }
 
 .addPros {
-  width: 15px;
+  width: 19px !important;
+  height: 19px !important;
   border: 1px solid #000;
-  margin-bottom: -5px;
+  margin-bottom: 5px;
   display: inline-block;
 }
 
