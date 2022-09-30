@@ -1,145 +1,233 @@
 body {
-   color: black;
-   background-color: #ddd;
+  color: black;
+  background-color: #ddd;
+  padding-bottom: 160px;
 }
-.calc {
-}
+
 .calc__wrapper {
-   margin: 0 auto;
-   max-width: 850px;
-   border: 1px solid #000;
-   border-radius: 10px;
-   padding: 10px;
-   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  max-width: 850px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
+
 .calc__title {
-   text-align: center;
-   font-size: 39px;
-   letter-spacing: 2px;
-   text-decoration: underline wavy black 1px;
+  text-align: center;
+  font-size: 39px;
+  letter-spacing: 2px;
+  -webkit-text-decoration: underline wavy black 1px;
+          text-decoration: underline wavy black 1px;
 }
+
 .calc__form {
-   display: flex;
-   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
 }
+@media (max-width: 699px) {
+  .calc__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .calc__left-form {
-   flex: 0 1 50%;
-   display: flex;
-   flex-direction: column;
-   margin-inline: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-inline: 10px;
 }
+
 .calc__left-inputs {
-   padding-inline: 10px;
-   flex: 0 1 50%;
-   display: flex;
-   flex-direction: column;
+  padding-inline: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .calc__left-inputs input {
-   max-width: 270px;
-   height: 30px;
-   padding: 5px;
+  max-width: 270px;
+  height: 30px;
+  padding: 5px;
 }
+
 .sum {
-   margin-bottom: 10px;
-   font-size: 20px;
-
+  margin-bottom: 10px;
+  font-size: 20px;
 }
+@media (max-width: 699px) {
+  .sum {
+    margin-left: -27px;
+  }
+}
+
 .time {
-   min-width: 285px;
-   height: 40px;
-   margin-bottom: 10px;
-   font-size: 20px;
+  min-width: 285px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
+
 select {
-   text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
+
+input::-webkit-input-placeholder {
+  font-size: 15px;
+}
+
+input::-moz-placeholder {
+  font-size: 15px;
+}
+
+input:-ms-input-placeholder {
+  font-size: 15px;
+}
+
+input::-ms-input-placeholder {
+  font-size: 15px;
+}
+
 input::placeholder {
-   font-size: 15px;
+  font-size: 15px;
 }
+
 .pros {
-   margin-bottom: 25px;
-   font-size: 20px;
-
+  margin-bottom: 25px;
+  font-size: 20px;
 }
+
+@media (max-width: 699px) {
+  .spanm {
+    position: relative;
+    top: -19px;
+    left: -50px;
+  }
+}
+
 .sumBlock {
-   position: relative;
+  position: relative;
 }
+
 .currency {
-   position: absolute;
-   height: 44px;
-   width: 40px;
-   font-size: 20px;
-   margin-left: -13px;
+  position: absolute;
+  height: 44px;
+  width: 40px;
+  font-size: 20px;
+  margin-left: -13px;
 }
+
 .addPros {
-   width: 15px;
-   border: 1px solid #000;
-   margin-bottom: -5px;
-   display: inline-block;
+  width: 15px;
+  border: 1px solid #000;
+  margin-bottom: -5px;
+  display: inline-block;
 }
+
 .calc__right-form {
-   flex: 0 1 50%;
-
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
+
 .calc__right-inputs {
-   text-align: center;
-   margin-top: 5px;
-}
-.calc__right-inputs input {
-   min-width: 230px;
-   height: 35px;
-   padding: 5px;
-   margin-bottom: 35px;
-   text-align: center;
-}
-.submit {
-   padding: 6px 30px;
-   border-radius: 15px;
-   background-color: burlywood;
-   transition: all 0.3s ease 0s;
-}
-.submit:active{
-   background-color: #000;
-   color: yellow;
-}
-.outSum, .outProfit {
-   font-size: 22px;
-   font-weight: bold;
-}
-input, select {
-   border-radius: 5px;
-}
-select {
-   border: 1.9px solid black;
+  text-align: center;
+  margin-top: 5px;
 }
 
+.calc__right-inputs input {
+  min-width: 230px;
+  height: 35px;
+  padding: 5px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.submit {
+  padding: 6px 30px;
+  border-radius: 15px;
+  background-color: burlywood;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.submit:active {
+  background-color: #000;
+  color: yellow;
+}
+
+.outSum, .outProfit {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+input, select {
+  border-radius: 5px;
+}
+
+select {
+  border: 1.9px solid black;
+}
 
 .option {
-   padding-top: 50px;
-   max-width: 1000px;
-   margin: 0 auto;
+  padding-top: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.optionBtn {
-   padding: 0px 15px;
-   font-size: 20px;
-   border-radius: 5px;
-}
-.optinonText {
-   border: 1px solid #000;
-   padding: 10px;
-   border-radius: 10px;
-   font-size: 17px;
-   line-height: 1.5;
-   transition: all 0.3s ease 0s;
 
+.optionBtn {
+  padding: 0px 15px;
+  font-size: 20px;
+  border-radius: 5px;
 }
-.optionBtn:hover{
-   background-color: #999;
+
+.optinonText {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
-.optionBtn:active{
-   background-color: #777;
-   color: white;
+
+.optionBtn:hover {
+  background-color: #999;
 }
+
+.optionBtn:active {
+  background-color: #777;
+  color: white;
+}
+
 .hide {
-   display: none;
+  display: none;
 }
