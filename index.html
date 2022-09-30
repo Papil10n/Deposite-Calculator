@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Deposite Calculator</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="calc">
+      <div class="calc__wrapper">
+         <div class="calc__title">Deposite Calculator</div>
+         <div class="calc__form"> <!-- flex -->
+            <div class="calc__left-form"> <!-- column -->
+               <div class="calc__left-inputs">
+                  <div class="sumBlock">
+                     <input type="text" onkeypress="validate(event)" placeholder="Сумма вклада" class="sum" maxlength="7">
+                     <select class="currency" id="currnc">
+                        <option selected value="Uah">₴</option>
+                        <option value="Usd">$</option>
+                     </select>
+                  </div>
+                  <div class="time">
+                     <select id="time" class="time">
+                        <option  value="3m">3</option>
+                        <option value="6m">6</option>
+                        <option value="3m">9</option>
+                        <option selected value="3m">12</option>
+                        <option value="3m">24</option>
+                     </select>
+                  </div>
+                  <input type="text" onkeypress="validate(event)" maxlength="3" placeholder="Процентная ставка" class="pros">
+                  <input type="checkbox" class="addPros">
+                  <span>Сложный процент</span>
+               </div>
+            </div>
+            <div class="calc__right-form"> <!-- column -->
+               <div class="calc__right-inputs">
+                  <input type="text" readonly class="outSum" placeholder="Сумма в конце срока">
+                  <br>
+                  <input type="text" readonly class="outProfit" placeholder="Доход">
+                  <br>
+                  <button class="submit">Расчет</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="option">
+      <button class="optionBtn">↯</button>
+      <p class="optinonText">
+         При использовании сложного процента происходит регулярный перерасчёт: к стартовой сумме прибавляется доход за определённый срок (месяц) и далее вознаграждение начисляется уже на увеличенный размер вложений.
+      </p>
+   </div>
+  
+   
+   <script src="script.js"></script>
+</body>
+</html>
